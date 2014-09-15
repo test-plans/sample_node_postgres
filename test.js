@@ -33,7 +33,7 @@ describe('Postgres Database', function () {
     db('things')
       .select()
       .then(function (docs) {
-        expect(docs[0].name).to.equal('Johson');
+        expect(docs[0].name).to.equal('Johnson');
         done();
       });
   });
