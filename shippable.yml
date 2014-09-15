@@ -6,11 +6,8 @@ node_js:
 
 # For xunit-file module to put results in shippable folder
 env:
- global:
   - XUNIT_FILE=shippable/testresults/result.xml
-  - secure: j05+wq1OrhnDjhVRCDWRrQ1PQWxo+9/8YgCR0feEJ09hKS1AcuHabMewBSs/Yre95FrzThS+ZN0yEJiA4yLDPlmhc9f/05jver6T8Bs8mvnlE30u94+P1deamAnGzyBaRGB8hku7NayFj9VPL4PGT0YAnMTdI7HVITZ1Y75WAAqyUyA7mnLPZo9NFpE//f/w4F0NR16ugsul58iN7vEr8dbwvpUUFyoZN8NWaUi55n1EwDAzi0UCvh/xocB/AFXWoN4dAYt7NOuZTCUNOMuWuonLXL9pd0sKNx52YCk6lfF0yFRZ4cu8mKJSklCKp0qH7uA2hutChB3Ou3B/jJjkbQ==
- matrix:
-  - task= yml
+  
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
 # Create a DB as part of before script to use it
 # Make folders for the reports, and create the SQL db
@@ -21,7 +18,6 @@ before_script:
 
 
 script:
-  - echo $foo_secure and $task
   - npm test
 
 # Generate coverage report with istanbul
