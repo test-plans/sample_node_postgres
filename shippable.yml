@@ -20,6 +20,7 @@ before_script:
 
 
 script:
+  - echo $foo_secure
   - npm test
 
 # Generate coverage report with istanbul
