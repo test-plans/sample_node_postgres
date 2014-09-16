@@ -17,6 +17,7 @@ before_script:
   - psql -c 'CREATE DATABASE app_test;' -U postgres
 
 
+
 script:
   - npm test
 
