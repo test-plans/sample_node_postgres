@@ -28,6 +28,10 @@ after_script:
   
 archive: true
 
+notifications:
+  email:
+    - vidya@shippable.com
+    
 branches:
   only:
     - master
