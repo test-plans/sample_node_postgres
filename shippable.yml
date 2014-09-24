@@ -6,7 +6,9 @@ node_js:
 
 # For xunit-file module to put results in shippable folder
 env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+ global:
+   - XUNIT_FILE=shippable/testresults/result.xml
+   - secure: iqgYSd/DQzGBFVyoCmwph5KHLxu/e7rQ+Ua9+yZ4fQ+3ocAmzJ8XVrxuoUy62wB4q24sVcyr44F2FxIIvzFORKW/JjqoMK64Aqsuibr8j5yPhIXfbGUJ22rF3KLA0Q3R2s5SfUXO8XfLJ2D/0BvH/Rr8tlyMPQPMjdD4iTQY0mxuyp0HyBmnzZ0ajJ62xtVXGaReQIgcIMNCEj5AEsT79iysczfPVzj2IPASl25UYcPzpOs9UxHilZilsRaiQPdvZp7XoUbNgMN3Qr5/AYYvcycaXgzZ/3y2cdgEprXMjTpOfrgP1pjHZIxNntTDWFwYTu5yZ9l4mthjVUKyqdtOng==
   
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
 # Create a DB as part of before script to use it
@@ -15,6 +17,7 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
   - psql -c 'CREATE DATABASE app_test;' -U postgres
+  - echo $var_tes
 
 
 script:
