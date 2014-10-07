@@ -16,9 +16,10 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - psql -c 'drop database if exists app_test;' -U postgres -w
   - psql -c 'CREATE DATABASE app_test;' -U postgres
   - echo $var_test
-#cache: true 
+cache: true 
 
 script:
   - npm test
