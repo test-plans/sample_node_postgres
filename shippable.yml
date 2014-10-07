@@ -18,7 +18,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - psql -c 'CREATE DATABASE app_test;' -U postgres
   - echo $var_test
-
+cache: true 
 
 script:
   - npm test
