@@ -39,7 +39,7 @@ archive: true
 notifications:
   email:
     - vidya@shippable.com
-build_image: shippable/minv2:beta
+#build_image: shippable/minv2:beta
     
 branches:
   only:
