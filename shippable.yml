@@ -33,9 +33,10 @@ after_script:
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
   
 
-cache: true   
+#cache: true   
 
 addons:
     postgresql : "9.3"
   
 
+#verify pr url
