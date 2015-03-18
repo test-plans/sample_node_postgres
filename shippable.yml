@@ -36,7 +36,7 @@ after_script:
 #cache: true   
 
 addons:
-    postgresql : "9.3"
+    postgresql : "9.2"
   
 
 #verify pr url
