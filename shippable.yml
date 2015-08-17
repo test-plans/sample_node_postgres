@@ -3,6 +3,7 @@ language: node_js
 node_js:
   - 0.10.25
   #- 0.11
+
 addons:
   postgresql: "9.1"
 # For xunit-file module to put results in shippable folder
@@ -20,8 +21,8 @@ before_script:
   - psql -c 'drop database if exists app_test;' -U postgres -w
   - psql -c 'CREATE DATABASE app_test;' -U postgres
  # - echo $var_test
-#cache: true 
 
+#cache: true 
 
 script:
   - npm test
