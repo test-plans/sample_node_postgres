@@ -3,8 +3,6 @@ language: node_js
 node_js:
   - 0.10
 
-
-
 # For xunit-file module to put results in shippable folder
 env:
  global:
@@ -19,7 +17,6 @@ before_script:
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/src
   - psql -c 'CREATE DATABASE app_test;' -U postgres
-
 
 
 script:
