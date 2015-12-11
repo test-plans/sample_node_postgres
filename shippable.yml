@@ -52,8 +52,4 @@ notifications:
   email:
     - vidya@shippable.com
 
-#build_image: shippable/minv2:beta
-    
-branches:
-  only:
-    - master
+
