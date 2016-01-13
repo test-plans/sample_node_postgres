@@ -1,5 +1,5 @@
 language: node_js
-build_image: drydock/u12nodall:tip
+build_image: drydock/u14nodall:tip
 
 node_js:
   - 0.10.25
